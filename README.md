@@ -1,10 +1,10 @@
 # ArtGameSystem
 Art Game System Templated
 
-#이름
+# 이름
   * 최영토 <youngtoechoi@gmail.com>
 
-#좋아하는 음식
+# 좋아하는 음식
   * 1타코 2타코 3타코
 
 # 추가된 외부 라이브러리
