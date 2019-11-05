@@ -1,5 +1,11 @@
 # ArtGameSystem
-Art Game System Template
+Art Game System Templated
+
+#이름
+  * 최영토 <youngtoechoi@gmail.com>
+
+#좋아하는 음식
+  * 1타코 2타코 3타코
 
 # 추가된 외부 라이브러리
  * p5.play <http://molleindustria.github.io/p5.play/>
