@@ -10,5 +10,6 @@ function setup() {
 
 function draw() {
   background(30);
-  rect(mouseX, mouseY, 100, 100);
+  fill(random(40,200),random(40,200),random(40,200),random(40,200))
+  ellipse(random(canvasWidth), random(canvasHeight), random(50,150), random(50,150));
 }
