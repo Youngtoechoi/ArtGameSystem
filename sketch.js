@@ -20,9 +20,6 @@ function draw() {
   //draw all the sprites added to the sketch so far
   //the positions will be updated automatically at every cycle
   drawSprites();
-  wall = createSprite(0,0, 30, height)
-  s.bounce(wall);
-  wall.bounce(s);
 }
 
 function mousePressed() {
