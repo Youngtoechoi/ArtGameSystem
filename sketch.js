@@ -20,7 +20,9 @@ function draw() {
   //draw all the sprites added to the sketch so far
   //the positions will be updated automatically at every cycle
 
-  var wall = createSprite (30,0, 30,height*2);
+  var wall = createSprite (0,0, 30,height*2);
+  wall.bounce(s);
+  s.bounce(wall);
   drawSprites();
 }
 
