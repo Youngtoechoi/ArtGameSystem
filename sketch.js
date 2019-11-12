@@ -22,6 +22,7 @@ function draw() {
 
   var wall = createSprite (0,0, 30,height*2);
   wall.bounce(s);
+  wall.immovable = true;
   s.bounce(wall);
   drawSprites();
 }
