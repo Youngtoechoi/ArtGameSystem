@@ -19,8 +19,9 @@ function draw() {
   text('Click to create a new sprite', width/2, height/2);
   //draw all the sprites added to the sketch so far
   //the positions will be updated automatically at every cycle
+
+  var wall = createSprite (10,10, 30,30);
   drawSprites();
-  createSprite (10,10, 30,30)
 }
 
 function mousePressed() {
