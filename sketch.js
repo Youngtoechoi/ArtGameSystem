@@ -20,6 +20,7 @@ function draw() {
   //draw all the sprites added to the sketch so far
   //the positions will be updated automatically at every cycle
   drawSprites();
+  createSprite (10,10, 30,30)
 }
 
 function mousePressed() {
