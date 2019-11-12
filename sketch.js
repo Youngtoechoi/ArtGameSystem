@@ -21,10 +21,6 @@ function draw() {
   //the positions will be updated automatically at every cycle
 
   var wall = createSprite (0,0, 30,height*2);
-  wall.bounce(s);
-  wall.immovable = true;
-  s.bounce(wall);
-  drawSprites();
 }
 
 function mousePressed() {
