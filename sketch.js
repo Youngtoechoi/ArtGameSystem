@@ -15,7 +15,7 @@ function setup() {
 function draw() {
   background(30);
   rect(mouseX, mouseY, 30, 30);
-  if (mouseIsPressed){cameraZoom =+ cameraZoom+1}
+  if (mouseIsPressed){cameraZoom =+ cameraZoom+0.05;}
   else {cameraZoom = 1;}
   camera.zoom = cameraZoom;
 }
