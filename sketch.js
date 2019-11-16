@@ -10,6 +10,7 @@ function setup() {
 }
 
 function draw() {
+  background(255,255,255)
   var s = createSprite(0, height/2, 30, 30)
   var wall = createSprite(width/2, height/2, 10, 10)
 
