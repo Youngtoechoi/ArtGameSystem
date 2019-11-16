@@ -1,8 +1,6 @@
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
-var SCENE_W = 1600;
-var SCENE_H = 800;
 
 
 function setup() {
