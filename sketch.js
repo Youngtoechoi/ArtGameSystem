@@ -1,15 +1,14 @@
-//gradually zooming animations
+let canvas;
+let canvasWidth = 600;
+let canvasHeight = 400;
 
-let zoom
-
-function setup(){
-  createCanveas(800,400)
-
+function setup() {
+  canvas = createCanvas(canvasWidth, canvasHeight);
+  canvas.position(windowWidth/2 - canvasWidth/2, 20);
+  noCursor();
 }
 
 function draw() {
-background(255,255,255)
-fill(100)
-ellipse(width/2, height/2, 30)
-
+  background(30);
+  rect(mouseX, mouseY, 100, 100);
 }
