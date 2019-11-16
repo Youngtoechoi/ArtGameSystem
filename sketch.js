@@ -1,14 +1,19 @@
-let canvas;
-let canvasWidth = 600;
-let canvasHeight = 400;
+//gradually zooming animations
 
-function setup() {
-  canvas = createCanvas(canvasWidth, canvasHeight);
-  canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  noCursor();
+let zoom
+
+function setup(){
+  createCanveas(800,400)
+
+  ghost = createSprite(400, 200, 50, 100);
+
+  var myAnimation = ghost.addAnimation('floating', 'assets/ghost_standing0001.png', 'assets/ghost_standing0007.png')
+  myAnimation.offY = 18;
+  ghost.addAnimation('moving', 'assets/ghost_walk0001.png', 'assets/ghost_walk0004.png');
+
 }
 
 function draw() {
-  background(30);
-  rect(mouseX, mouseY, 100, 100);
+
+drawSprites(ghost);
 }
