@@ -1,7 +1,8 @@
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
-let sX,sY =0, height/2;
+let sX =0;
+let sY =200;
 
 
 function setup() {
