@@ -26,14 +26,14 @@ function draw() {
   }
   drawSprites();
 }
-keyPressed(){
-  if (keyCode == LEFT_ARROW){
-  sX=  sX-5}
-  else if (keyCode == RIGHT_ARROW){
-  sX=  sX+5}
-  else if (keyCode == DOWN_ARROW){
-  sY=  sY+5}
-  else if (keyCode == UP_ARROW){
-  sY=  sY-5}
-
-  }
+// keyPressed(){
+//   if (keyCode == LEFT_ARROW){
+//   sX=  sX-5}
+//   else if (keyCode == RIGHT_ARROW){
+//   sX=  sX+5}
+//   else if (keyCode == DOWN_ARROW){
+//   sY=  sY+5}
+//   else if (keyCode == UP_ARROW){
+//   sY=  sY-5}
+//
+//   }
