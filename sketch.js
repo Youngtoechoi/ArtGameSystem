@@ -23,8 +23,10 @@ function draw() {
   s.position.y = sY;
   wall.position.x = wX;
   wall.position.y = wY;
-  if (s.overlap(wall)){
-    sX = 0, 200;
+  wY = wY + 5
+  if (wX >=250) {
+    wY = 0;
+    wY = wY+5
   }
   s.collide(wall);
   drawSprites();
