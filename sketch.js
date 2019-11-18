@@ -23,9 +23,10 @@ function draw() {
   s.position.y = sY;
   wall.position.x = wX;
   wall.position.y = wY;
-  if (wY =< 400){
-  wY = wY - 5;}
-  else if (wY >= 0){
+  if (wY => 400){
+  wY = wY - 5;
+}
+  else if (wY =< 0){
     wY = wY + 5;
   }
   s.collide(wall);
