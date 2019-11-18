@@ -23,9 +23,10 @@ function draw() {
   s.position.y = sY;
   wall.position.x = wX;
   wall.position.y = wY;
-  wY = wY + (velocity *5);
-  if (wY => 400 || wY =< 0 ){
-  velocity = velocity * -1}
+  wY = wY + 5
+  if (wX >400) {
+    wY = 0;
+  }
   s.collide(wall);
   drawSprites();
 }
