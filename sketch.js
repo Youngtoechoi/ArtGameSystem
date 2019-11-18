@@ -22,7 +22,6 @@ function draw() {
   var wall = createSprite(width/2, height/2, 10, 10)
 
   if (s.overlap(wall)){
-
     wall.visible = false;
   }
   else {
@@ -30,7 +29,7 @@ function draw() {
   }
   drawSprites();
 }
-keyPressed(){
+function keyPressed(){
   if (keyCode == LEFT_ARROW){
   sX=  sX-5}
   else if (keyCode == RIGHT_ARROW){
