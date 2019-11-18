@@ -27,9 +27,12 @@ function draw() {
   if (wY >400) {
     wY = 0;
   }
-  s.collide(wall);
-  drawSprites();
+if (sX.overlap(wall)){
+  sX = 0;
+  sY = 200;
 }
+}
+
 function keyPressed(){
   if (keyCode == LEFT_ARROW){
   sX=  sX-15}
