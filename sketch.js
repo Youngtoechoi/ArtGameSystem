@@ -21,10 +21,10 @@ function draw() {
   s.position.y = sY;
 
   if (s.overlap(wall)){
-    wall.visible = false;
+    wall.visible = true;
   }
   else {
-    wall.visible = true;
+    wall.visible = false;
   }
   drawSprites();
 }
