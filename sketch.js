@@ -7,6 +7,7 @@ var s, wall;
 let wX = 300;
 let wY = 200;
 let velocity = 1;
+
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
@@ -27,7 +28,7 @@ function draw() {
   if (wY >400) {
     wY = 0;
   };
-  drawSprties();
+  drawSprites();
 }
 
 function keyPressed(){
