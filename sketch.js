@@ -17,8 +17,8 @@ function setup() {
 
 function draw() {
   background(255,255,255)
-  s.position.x(sX);
-  s.position.y(sY);
+  s.position.x = sX;
+  s.position.y = sY;
 
   if (s.overlap(wall)){
     wall.visible = false;
@@ -28,11 +28,7 @@ function draw() {
   }
   drawSprites();
 }
-<<<<<<< HEAD
 function keyPressed(){
-=======
-keyPressed(){
->>>>>>> parent of 6bd2381... erased keyPressed
   if (keyCode == LEFT_ARROW){
   sX=  sX-5}
   else if (keyCode == RIGHT_ARROW){
