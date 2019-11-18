@@ -12,14 +12,11 @@ function setup() {
 
    s = createSprite(sX, sY, 30, 30)
    wall = createSprite(width/2, height/2, 10, 10)
+   
 }
 
 function draw() {
   background(255,255,255)
-
-
-  var s = createSprite(sX, sY, 30, 30)
-  var wall = createSprite(width/2, height/2, 10, 10)
 
   if (s.overlap(wall)){
     wall.visible = false;
