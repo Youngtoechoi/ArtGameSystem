@@ -24,8 +24,9 @@ function draw() {
   wall.position.x = wX;
   wall.position.y = wY;
   wY = wY + 5
-  if (wX >400) {
+  if (wX >=400) {
     wY = 0;
+    wY = wY+5
   }
   s.collide(wall);
   drawSprites();
