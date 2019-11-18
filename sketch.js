@@ -28,7 +28,11 @@ function draw() {
   }
   drawSprites();
 }
+<<<<<<< HEAD
 function keyPressed(){
+=======
+keyPressed(){
+>>>>>>> parent of 6bd2381... erased keyPressed
   if (keyCode == LEFT_ARROW){
   sX=  sX-5}
   else if (keyCode == RIGHT_ARROW){
