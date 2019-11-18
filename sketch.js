@@ -28,6 +28,10 @@ function draw() {
   if (wY >400) {
     wY = 0;
   };
+  if (s.overlap(wall)){
+    sX=0;
+    sY=200;
+  };
   drawSprites();
 }
 
