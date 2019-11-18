@@ -4,6 +4,8 @@ let canvasHeight = 400;
 let sX =0;
 let sY =200;
 var s, wall;
+let wX = width/2;
+let wY = height/2;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -19,7 +21,10 @@ function draw() {
   background(255,255,255)
   s.position.x = sX;
   s.position.y = sY;
-
+  wall.position.x = wX;
+  wall.position.y = wY;
+  wX = wX + 5;
+  wY = wY + 5;
   s.collide(wall);
   drawSprites();
 }
