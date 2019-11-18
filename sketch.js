@@ -3,16 +3,23 @@ let canvasWidth = 600;
 let canvasHeight = 400;
 let sX =0;
 let sY =200;
-
+var s, wall;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   noCursor();
+<<<<<<< HEAD
+
+   s = createSprite(sX, sY, 30, 30)
+   wall = createSprite(width/2, height/2, 10, 10)
+=======
+>>>>>>> parent of 75a0a5e... erasing before image
 }
 
 function draw() {
   background(255,255,255)
+
 
   var s = createSprite(sX, sY, 30, 30)
   var wall = createSprite(width/2, height/2, 10, 10)
