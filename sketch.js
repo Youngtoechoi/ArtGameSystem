@@ -23,7 +23,6 @@ function draw() {
   s.position.y = sY;
   wall.position.x = wX;
   wall.position.y = wY;
-  wY = wY+3;
   if (s.overlap(wall)){
     sX = 0, 200;
   }
