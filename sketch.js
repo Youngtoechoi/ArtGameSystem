@@ -14,7 +14,7 @@ function setup() {
   noCursor();
 
    s = createSprite(sX, sY, 30, 30)
-   wall = createSprite(wX, wY, 10, 10)
+   wall = createSprite(wX, wY, 30, 30)
 
 }
 
