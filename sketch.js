@@ -6,7 +6,7 @@ let sY =200;
 var s, wall;
 let wX = 300;
 let wY = 200;
-
+let velocity = 1;
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
@@ -23,12 +23,9 @@ function draw() {
   s.position.y = sY;
   wall.position.x = wX;
   wall.position.y = wY;
-//   if (wY => 400){
-//   wY = wY - 5;
-// }
-//   else if (wY =< 0){
-//     wY = wY + 5;
-//   }
+  wY = wY + (velocity *5);
+  if (wY => 400 || wY =< 0 ){
+  velocity = velocity * -1}
   s.collide(wall);
   drawSprites();
 }
