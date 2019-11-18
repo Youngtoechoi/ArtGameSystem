@@ -27,10 +27,6 @@ function draw() {
   if (wY >400) {
     wY = 0;
   }
-if (sX.overlap(wall)){
-  sX = 0;
-  sY = 200;
-}
 }
 
 function keyPressed(){
