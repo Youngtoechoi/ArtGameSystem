@@ -23,6 +23,7 @@ function draw() {
   s.position.y = sY;
   wall.position.x = wX;
   wall.position.y = wY;
+  wY = wY +5;
   s.collide(wall);
   drawSprites();
 }
