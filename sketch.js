@@ -30,7 +30,7 @@ function keyPressed(){
   if (keyCode == LEFT_ARROW){
   sX=  sX-15}
   else if (keyCode == RIGHT_ARROW){
-  sX=  sX+15}new p5.Element(elt,pInst)
+  sX=  sX+15}
   else if (keyCode == DOWN_ARROW){
   sY=  sY+15}
   else if (keyCode == UP_ARROW){
