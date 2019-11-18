@@ -26,6 +26,9 @@ function draw() {
   if (s.overlap(wall)){
     sX = 0, 200;
   }
+  wY = wY+3;
+  if (wY>400)
+  {wY = 0;}
   s.collide(wall);
   drawSprites();
 }
@@ -33,7 +36,7 @@ function keyPressed(){
   if (keyCode == LEFT_ARROW){
   sX=  sX-15}
   else if (keyCode == RIGHT_ARROW){
-  sX=  sX+15}
+  sX=  sX+15}new p5.Element(elt,pInst)
   else if (keyCode == DOWN_ARROW){
   sY=  sY+15}
   else if (keyCode == UP_ARROW){
