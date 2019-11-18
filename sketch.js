@@ -27,8 +27,6 @@ function draw() {
   if (s.overlap(wall)){
     sX = 0, 200;
   }
-  if (wY>400)
-  {wY = 0;}
   s.collide(wall);
   drawSprites();
 }
