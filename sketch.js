@@ -26,10 +26,7 @@ function draw() {
   wY = wY +5;
   if (wY >400) {
     wY = 0;
-  }
-  if (s.overlap(wall))
-{sX=0;
-sY =200;}
+  };
   drawSprties();
 }
 
