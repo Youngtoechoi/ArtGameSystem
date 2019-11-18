@@ -4,8 +4,8 @@ let canvasHeight = 400;
 let sX =0;
 let sY =200;
 var s, wall;
-let wX = width/2;
-let wY = height/2;
+let wX = 300;
+let wY = 200;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -13,7 +13,7 @@ function setup() {
   noCursor();
 
    s = createSprite(sX, sY, 30, 30)
-   wall = createSprite(width/2, height/2, 10, 10)
+   wall = createSprite(wX, wY, 10, 10)
 
 }
 
