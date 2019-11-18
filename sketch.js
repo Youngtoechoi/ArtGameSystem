@@ -23,11 +23,6 @@ function draw() {
   s.position.y = sY;
   wall.position.x = wX;
   wall.position.y = wY;
-  wY = wY + 5
-  if (wX >=250) {
-    wY = 0;
-    wY = wY+5
-  }
   s.collide(wall);
   drawSprites();
 }
