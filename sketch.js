@@ -37,12 +37,12 @@ function draw() {
 
 function keyPressed(){
   if (keyCode == LEFT_ARROW){
-  sX=  sX-15}
+  sX=  sX-25}
   else if (keyCode == RIGHT_ARROW){
-  sX=  sX+15}
+  sX=  sX+25}
   else if (keyCode == DOWN_ARROW){
-  sY=  sY+15}
+  sY=  sY+25}
   else if (keyCode == UP_ARROW){
-  sY=  sY-15}
+  sY=  sY-25}
 
   }
