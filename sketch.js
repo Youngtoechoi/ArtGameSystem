@@ -32,6 +32,8 @@ function draw() {
     sX=0;
     sY=200;
   };
+  if (sX>=600) { text('You Win',width/2, height/2); 
+  }
   drawSprites();
 }
 
