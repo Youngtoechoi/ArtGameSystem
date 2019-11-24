@@ -92,7 +92,9 @@ function playHitSound() {
   sound_hit.play();
 }
 function Uturn() {
-  let carDist = frog  .position.x - car1.position.x;
-  if (carDist < 100) { car1.setVelocity (-random(-3,10),0)}
+  let carDist = abs(frog  .position.x - car1.position.x);
+  if (carDist < 100 && frog.position.y == car1.position.y) {
+    carVelocX = carVelocX*-1;
+    car1.setVelocity (carVelocX,0);}
   }
 //
