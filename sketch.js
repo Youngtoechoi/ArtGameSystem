@@ -5,6 +5,7 @@ let sound_hit;
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
+let carVelocX;
 
 function preload() {
   sound_hit = loadSound('assets/hit.wav');
@@ -30,7 +31,7 @@ function draw() {
 
   if (car1.position.x >= width) {
     car1.position.x = 0;
-    car1.setVelocity(random(3, 10), 0);
+    car1.setVelocity(random(3,10), 0);
   }
   //
   //
@@ -49,17 +50,17 @@ function draw() {
     nextLevel();
   }
   //
+  Uturn();
   drawSprites();
   checkGameOver();
-
 }
 
 
 function resetGame() {
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
-
-  car1.setVelocity(random(3, 10), 0);
+  carVelocX = 3;
+  car1.setVelocity(carVelocX,0);
 }
 
 
@@ -90,3 +91,8 @@ function nextLevel() {
 function playHitSound() {
   sound_hit.play();
 }
+function Uturn() {
+  let carDist = frog  .position.x - car1.position.x;
+  if (carDist < 100) { car1.setVelocity (-random(-3,10),0)}
+  }
+//
