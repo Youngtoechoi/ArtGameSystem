@@ -8,11 +8,16 @@ let canvasHeight = 400;
 
 function preload() {
   sound_hit = loadSound('assets/hit.wav');
+  sad_frog = loadImage('assets/sad_frog.png');
 }
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position (windowWidth/2 - canvasWidth/2, 20);
+  frog = createSprite(width/2, height -40);
+  frog.addImage(sad_frog);
+  // frog.scale = 0.05;
+
   noCursor();
 
   resetGame();
@@ -27,22 +32,23 @@ function draw() {
     car1.position.x = 0;
     car1.setVelocity(random(3, 10), 0);
   }
-
-
+  //
+  //
 
   if (frog.bounce(car1)) {
     sound_hit.play();
   }
-
-  // 충돌 시 사운드 효과에 대한 또 다른 방법
-  // frog.collide(car1, playHitSound);
-  // frog.bounce(car1);
-
-
+  //
+  //
+  // // 충돌 시 사운드 효과에 대한 또 다른 방법
+  // // frog.collide(car1, playHitSound);
+  // // frog.bounce(car1);
+  //
+  //
   if (frog.overlap(goal)) {
     nextLevel();
   }
-
+  //
   drawSprites();
   checkGameOver();
 
@@ -50,7 +56,6 @@ function draw() {
 
 
 function resetGame() {
-  frog = createSprite(width/2, height-30, 20, 40);
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
 
