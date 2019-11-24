@@ -29,7 +29,7 @@ function draw() {
   background(220);
 
 
-  if (car1.position.x >= width) {
+  if (car1.position.x >= width || car1.position.x <= -20) {
     car1.position.x = 0;
     car1.setVelocity(random(3,10), 0);
   }
