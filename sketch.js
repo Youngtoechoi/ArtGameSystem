@@ -29,17 +29,17 @@ function setup() {
 function draw() {
   background(220);
 
-for (var i  = 0; i<car1.length; i++){
-var c = car1[i]
+for (var i  = 0; i<carGroup.length; i++){
+var c = carGroup[i];
   if (c.position.x >= width ) {
     c.position.x = 0;
     c.setVelocity(random(3,10), 0);
-  }
+  };
 }
   //
   //
 
-  if (frog.bounce(car1)) {
+  if (frog.bounce(c)) {
     sound_hit.play();
   }
   //
@@ -60,12 +60,15 @@ var c = car1[i]
 
 
 function resetGame() {
-  goal = createSprite(width/2, 0, width, 4);
+  goal = createSprite(width/2, 0, width, 30);
+  carGroup = new Group();
 for(var i = 0 ; i<10; i++){
- car1 = createSprite(random(-100,100), random(1,10)*30, 60, 30);
+ car1 = createSprite(round(random(-1,-10)*60), round (random(1,10))*30, 60, 30);
 
   carVelocX = 3;
   car1.setVelocity(carVelocX,0);
+  car1.addToGroup(carGroup);
+
 }
 }
 
