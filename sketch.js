@@ -1,11 +1,12 @@
 let frog;
-let car1;
+var car1;
 let goal;
 let sound_hit;
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
 let carVelocX;
+var carGroup;
 
 function preload() {
   sound_hit = loadSound('assets/hit.wav');
@@ -28,11 +29,13 @@ function setup() {
 function draw() {
   background(220);
 
-
-  if (car1.position.x >= width || car1.position.x <= -20) {
-    car1.position.x = 0;
-    car1.setVelocity(random(3,10), 0);
+for (var i  = 0; i<car1.length; i++){
+var c = car1[i]
+  if (c.position.x >= width ) {
+    c.position.x = 0;
+    c.setVelocity(random(3,10), 0);
   }
+}
   //
   //
 
@@ -58,11 +61,13 @@ function draw() {
 
 function resetGame() {
   goal = createSprite(width/2, 0, width, 4);
-  car1 = createSprite(0, height/2, 60, 30);
+for(var i = 0 ; i<10; i++){
+ car1 = createSprite(random(-100,100), random(1,10)*30, 60, 30);
+
   carVelocX = 3;
   car1.setVelocity(carVelocX,0);
 }
-
+}
 
 function keyPressed() {
   if (keyCode == UP_ARROW) {
