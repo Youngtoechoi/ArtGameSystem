@@ -4,6 +4,7 @@ let canvasHeight = 400;
 var meX, meY;
 var me;
 var passengers;
+var subway, subway2;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -16,6 +17,7 @@ function setup() {
     passenger.setSpeed(random(2,3),random (0,360));
     passengers.add(passenger);
   }
+  subway();
 }
 
 function draw() {
@@ -23,4 +25,10 @@ function draw() {
 
 
 drawSprites();
+}
+
+function subway() {
+  subway = createSprite(width/2, height/4, width, 10);
+  subway2 = createSprite(width/2, height/3*2, width, 10);
+
 }
