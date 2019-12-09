@@ -19,12 +19,14 @@ function setup() {
     passengers.add(passenger);
   }
   subway();
+
+
 }
 
 function draw() {
   background(30);
   passengers.bounce(subways);
-
+  bounceEdge();
 drawSprites();
 }
 
@@ -37,4 +39,30 @@ function subway() {
   subways.add(subway);
   subways.add(subway2);
   subways.immovable = true;
+}
+
+function bounceEdge() {
+  for(var i=0; i<allSprites.length; i++) {
+   var s = allSprites[i];
+   if(s.position.x<0) {
+     s.position.x = 1;
+     s.velocity.x = abs(s.velocity.x);
+   }
+
+   if(s.position.x>width) {
+     s.position.x = width-1;
+     s.velocity.x = -abs(s.velocity.x);
+   }
+
+   if(s.position.y<0) {
+     s.position.y = 1;
+     s.velocity.y = abs(s.velocity.y);
+   }
+
+   if(s.position.y>height) {
+     s.position.y = height-1;
+     s.velocity.y = -abs(s.velocity.y);
+   }
+ }
+
 }
