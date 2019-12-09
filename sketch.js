@@ -4,7 +4,8 @@ let canvasHeight = 400;
 var meX, meY;
 var me;
 var passengers;
-var subway, subway2;
+var subways, subway, subway2;
+
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -13,7 +14,7 @@ function setup() {
   passengers = new Group();
   for(var i=0; i<5; i++)
   {
-    var passenger = createSprite(random(0,width), random(0, height),30,30);
+    var passenger = createSprite(random(0,width), random(height/4, height/3*2),30,30);
     passenger.setSpeed(random(2,3),random (0,360));
     passengers.add(passenger);
   }
@@ -22,13 +23,18 @@ function setup() {
 
 function draw() {
   background(30);
-
+  passengers.bounce(subways);
 
 drawSprites();
 }
 
 function subway() {
   subway = createSprite(width/2, height/4, width, 10);
+  subway.immovable = true;
   subway2 = createSprite(width/2, height/3*2, width, 10);
-
+  subway2.immovable = true;
+  subways = new Group();
+  subways.add(subway);
+  subways.add(subway2);
+  subways.immovable = true;
 }
