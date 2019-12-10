@@ -12,7 +12,7 @@ function setup() {
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   noCursor();
   passengers = new Group();
-  for(var i=0; i<5; i++)
+  for(var i=0; i<50; i++)
   {
     var passenger = createSprite(random(0,width), random(height/4, height/3*2),30,30);
     passenger.setSpeed(random(2,3),random (0,360));
