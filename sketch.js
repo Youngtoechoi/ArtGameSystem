@@ -18,7 +18,9 @@ function setup() {
     passenger.setSpeed(random(2,3),random (0,360));
     passengers.add(passenger);
   }
+    me = createSprite(width/2, height*3/4, 40,40);
   subway();
+  doorOpen();
 
 
 }
@@ -26,19 +28,26 @@ function setup() {
 function draw() {
   background(30);
   passengers.bounce(subways);
+  me.collide(passengers);
+  me.bounce(subways);
   bounceEdge();
+  meMove();
 drawSprites();
+
+
 }
 
 function subway() {
   subway = createSprite(width/2, height/4, width, 10);
   subway.immovable = true;
-  subway2 = createSprite(width/2, height/3*2, width, 10);
+  subway2 = createSprite(0, height/3*2, width/2, 10);
   subway2.immovable = true;
+  subway3 = createSprite(width + 60, height/3*2, width,10);
+  subway3.immovable = true;
   subways = new Group();
   subways.add(subway);
   subways.add(subway2);
-  subways.immovable = true;
+  subways.add(subway3);
 }
 
 function bounceEdge() {
@@ -65,4 +74,20 @@ function bounceEdge() {
    }
  }
 
+}
+
+function meMove(){
+
+   if(keyWentDown('d'))
+   {me.position.x = me.position.x + 5;}
+   if(keyWentDown('a'))
+   {me.position.x = me.position.x + -5;}
+   if(keyWentDown('w'))
+  {me.position.y = me.position.y -5;}
+  if(keyWentDown('s'))
+    {me.position.y = me.position.y + 5;}
+}
+
+function doorOpen(){
+  subway2.position.x = subway2.position.x - 0;
 }
