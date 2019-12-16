@@ -1,5 +1,5 @@
 let canvas;
-let canvasWidth = 600;
+let canvasWidth = 1200;
 let canvasHeight = 400;
 var meX, meY;
 var me;
@@ -9,7 +9,7 @@ var subways, subway, subway2;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
-  canvas.position(windowWidth/2 - canvasWidth/2, 20);
+  canvas.position(windowWidth/2 - canvasWidth/2, 20 );
   noCursor();
   passengers = new Group();
   for(var i=0; i<50; i++)
