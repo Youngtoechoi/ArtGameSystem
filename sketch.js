@@ -135,7 +135,9 @@ function gameOver() {
   { textAlign(CENTER);
     textSize(100);
     text('Succeed', width/2, height/2);
-  fill(0);}
+  fill(0);
+noloop();
+}
 
   else if (time >12 && me.position.y > 265)
   { textAlign(CENTER);
