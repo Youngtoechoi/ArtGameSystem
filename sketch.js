@@ -6,6 +6,7 @@ var me;
 var passengers;
 var subways, subway, subway2,subway3,subway4;
 let sadang;
+var time;
 
 
 function preload(){
@@ -14,7 +15,7 @@ function preload(){
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20 );
-  noCursor();
+  // noCursor();
   frameRate(60);
   passengers = new Group();
 
@@ -36,6 +37,7 @@ function setup() {
 function draw() {
   background(255,255,255);
   passengers.bounce(subways);
+  passengers.bounce(passengers);
   me.collide(passengers);
   me.bounce(subways);
   bounceEdge();
@@ -44,8 +46,15 @@ function draw() {
   doorOpen();
     image(sadang, 0, 0);
     sadang.resize(width, height);
+    gameOver();
 drawSprites();
+  textSize(50);
+  text('TIME:', width-200, 80);
+  time = frameCount/60;
+  time = int(time);
 
+  text(12-time, width-60, 80);
+  text(mouseY, width/2, height/2);
 
 }
 
@@ -119,4 +128,20 @@ function doorOpen() {
     else if( subway3.position.x < width -120)
     {subway3.velocity.x = 0;}
 }
+}
+
+function gameOver() {
+  if (time >12 && me.position.y> 100&& me.position.y < 265)
+  { textAlign(CENTER);
+    textSize(100);
+    text('Succeed', width/2, height/2);
+  fill(0);}
+
+  else if (time >12 && me.position.y > 265)
+  { textAlign(CENTER);
+    textSize(100);
+    fill(255,0,0);
+    text('GAMEOVER', width/2, height/2);}
+    fill(0);
+    noLoop();
 }
