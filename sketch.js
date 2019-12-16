@@ -5,13 +5,12 @@ var meX, meY;
 var me;
 var passengers;
 var subways, subway, subway2,subway3,subway4;
-// let sadang;
+let sadang;
 
-// function preload() {
-//
-//   // sadang = loadImage('assets/sadang.jfif');
-// }
 
+function preload(){
+  sadang = loadImage('assets/sadang.jpg')
+}
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20 );
@@ -27,9 +26,9 @@ function setup() {
   }
     me = createSprite(width/2, height*3/4, 40,40);
   subway();
+
   doorOpen();
-  // image(sadang, width/2, 100);
-  )
+
 
 
 }
@@ -43,7 +42,8 @@ function draw() {
   text(frameCount);
   meMove();
   doorOpen();
-  // doorClose();
+    image(sadang, 0, 0);
+    sadang.resize(width, height);
 drawSprites();
 
 
@@ -100,16 +100,7 @@ function meMove(){
     {me.position.y = me.position.y + 5;}
 }
 
-function doorClose(){
-  if (frameCount > 60*4)
-  {
-  if(subway3.position.x > width )
-  {
-  subway3.velocity.x = -2;}
-  else if( subway3.position.x < width -120)
-  {subway3.velocity.x = 0;}
-}
-}
+
 function doorOpen() {
   if
   (frameCount > 60*3 && frameCount < 60*8)
