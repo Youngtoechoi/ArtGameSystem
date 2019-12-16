@@ -5,13 +5,20 @@ var meX, meY;
 var me;
 var passengers;
 var subways, subway, subway2,subway3,subway4;
+let sadang;
 
+function preload() {
+
+  sadang = loadImage('assets/sadang.png');
+}
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20 );
   noCursor();
+  frameRate(60);
   passengers = new Group();
+
   for(var i=0; i<50; i++)
   {
     var passenger = createSprite(random(0,width), random(height/4, height/3*2),30,30);
@@ -21,6 +28,8 @@ function setup() {
     me = createSprite(width/2, height*3/4, 40,40);
   subway();
   doorOpen();
+  // image(sadang, width/2, 100);
+  )
 
 
 }
@@ -31,8 +40,10 @@ function draw() {
   me.collide(passengers);
   me.bounce(subways);
   bounceEdge();
+  text(frameCount);
   meMove();
   doorOpen();
+  // doorClose();
 drawSprites();
 
 
@@ -90,17 +101,31 @@ function meMove(){
 }
 
 function doorClose(){
-  if(subway3.position.x > width + 60 -60)
+  if (frameCount > 60*4)
   {
-  subway3.velocity.x = 2;}
-  else if( subway3.position.x < width -100)
+  if(subway3.position.x > width )
+  {
+  subway3.velocity.x = -2;}
+  else if( subway3.position.x < width -120)
   {subway3.velocity.x = 0;}
-
+}
 }
 function doorOpen() {
-  if(subway3.position.x < width + 60 -60)
-  {
-  subway3.velocity.x = 2;}
-  else if( subway3.position.x > width -120)
-  {subway3.velocity.x = 0;}
+  if
+  (frameCount > 60*3 && frameCount < 60*8)
+    {
+      if(subway3.position.x < width )
+      {
+      subway3.velocity.x = 2;}
+      else if( subway3.position.x > width -120)
+      {subway3.velocity.x = 0;}}
+
+  else if
+  (frameCount > 60*12)
+    {
+      if(subway3.position.x > width-100 )
+    {subway3.velocity.x = -2;}
+    else if( subway3.position.x < width -120)
+    {subway3.velocity.x = 0;}
+}
 }
