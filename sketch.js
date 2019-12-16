@@ -4,8 +4,12 @@ let canvasHeight = 400;
 var meX, meY;
 var me;
 var passengers;
+<<<<<<< HEAD
 var subways, subway, subway2,subway3,subway4;
 // let sadang;
+=======
+var subways, subway, subway2;
+>>>>>>> parent of eda26b8... door open/close
 
 // function preload() {
 //
@@ -35,26 +39,29 @@ function setup() {
 }
 
 function draw() {
-  background(255,255,255);
+  background(30);
   passengers.bounce(subways);
   me.collide(passengers);
   me.bounce(subways);
   bounceEdge();
   text(frameCount);
   meMove();
+<<<<<<< HEAD
   doorOpen();
   // doorClose();
+=======
+>>>>>>> parent of eda26b8... door open/close
 drawSprites();
 
 
 }
 
 function subway() {
-  subway = createSprite(width/2, height/4, width, 20);
+  subway = createSprite(width/2, height/4, width, 10);
   subway.immovable = true;
-  subway2 = createSprite(0, height/3*2, width/2+400, 20);
+  subway2 = createSprite(0, height/3*2, width/2, 10);
   subway2.immovable = true;
-  subway3 = createSprite(width-120, height/3*2, width,20);
+  subway3 = createSprite(width + 60, height/3*2, width,10);
   subway3.immovable = true;
   subways = new Group();
   subways.add(subway);
@@ -100,6 +107,7 @@ function meMove(){
     {me.position.y = me.position.y + 5;}
 }
 
+<<<<<<< HEAD
 function doorClose(){
   if (frameCount > 60*4)
   {
@@ -128,4 +136,8 @@ function doorOpen() {
     else if( subway3.position.x < width -120)
     {subway3.velocity.x = 0;}
 }
+=======
+function doorOpen(){
+  subway2.position.x = subway2.position.x - 0;
+>>>>>>> parent of eda26b8... door open/close
 }
