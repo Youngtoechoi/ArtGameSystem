@@ -54,7 +54,7 @@ drawSprites();
   time = int(time);
 
   text(12-time, width-60, 80);
-  text(mouseY, width/2, height/2);
+  // text(mouseY, width/2, height/2);
 
 }
 
