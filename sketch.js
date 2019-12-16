@@ -4,7 +4,7 @@ let canvasHeight = 400;
 var meX, meY;
 var me;
 var passengers;
-var subways, subway, subway2;
+var subways, subway, subway2,subway3,subway4;
 
 
 function setup() {
@@ -26,23 +26,24 @@ function setup() {
 }
 
 function draw() {
-  background(30);
+  background(255,255,255);
   passengers.bounce(subways);
   me.collide(passengers);
   me.bounce(subways);
   bounceEdge();
   meMove();
+  doorOpen();
 drawSprites();
 
 
 }
 
 function subway() {
-  subway = createSprite(width/2, height/4, width, 10);
+  subway = createSprite(width/2, height/4, width, 20);
   subway.immovable = true;
-  subway2 = createSprite(0, height/3*2, width/2, 10);
+  subway2 = createSprite(0, height/3*2, width/2+400, 20);
   subway2.immovable = true;
-  subway3 = createSprite(width + 60, height/3*2, width,10);
+  subway3 = createSprite(width-120, height/3*2, width,20);
   subway3.immovable = true;
   subways = new Group();
   subways.add(subway);
@@ -88,6 +89,18 @@ function meMove(){
     {me.position.y = me.position.y + 5;}
 }
 
-function doorOpen(){
-  subway2.position.x = subway2.position.x - 0;
+function doorClose(){
+  if(subway3.position.x > width + 60 -60)
+  {
+  subway3.velocity.x = 2;}
+  else if( subway3.position.x < width -100)
+  {subway3.velocity.x = 0;}
+
+}
+function doorOpen() {
+  if(subway3.position.x < width + 60 -60)
+  {
+  subway3.velocity.x = 2;}
+  else if( subway3.position.x > width -120)
+  {subway3.velocity.x = 0;}
 }
