@@ -19,7 +19,7 @@ function setup() {
   frameRate(60);
   passengers = new Group();
 
-  for(var i=0; i<50; i++)
+  for(var i=0; i<75; i++)
   {
     var passenger = createSprite(random(0,width), random(height/4, height/3*2),30,30);
     passenger.setSpeed(random(2,3),random (0,360));
@@ -46,7 +46,7 @@ function draw() {
   doorOpen();
     image(sadang, 0, 0);
     sadang.resize(width, height);
-    gameOver();
+
 drawSprites();
   textSize(50);
   text('TIME:', width-200, 80);
@@ -54,6 +54,7 @@ drawSprites();
   time = int(time);
 
   text(12-time, width-60, 80);
+    gameOver();
   // text(mouseY, width/2, height/2);
 
 }
@@ -100,13 +101,15 @@ function bounceEdge() {
 function meMove(){
 
    if(keyWentDown('d'))
-   {me.position.x = me.position.x + 5;}
+   {me.position.x = me.position.x + 8;}
    if(keyWentDown('a'))
-   {me.position.x = me.position.x + -5;}
+   {me.position.x = me.position.x + -8;}
    if(keyWentDown('w'))
-  {me.position.y = me.position.y -5;}
+  {me.position.y = me.position.y -8;}
   if(keyWentDown('s'))
-    {me.position.y = me.position.y + 5;}
+    {me.position.y = me.position.y + 8;}
+    me.velocity.x = 0;
+    me.velocity.y = 0;
 }
 
 
@@ -134,13 +137,13 @@ function gameOver() {
   if (time >12 && me.position.y> 100&& me.position.y < 265)
   { textAlign(CENTER);
     textSize(100);
-    text('Succeed', width/2, height/2);
+    text('Well Done!!', width/2, height/2);
   fill(0);}
 
   else if (time >12 && me.position.y > 265)
   { textAlign(CENTER);
     textSize(100);
     fill(255,0,0);
-    text('GAMEOVER', width/2, height/2);}
+    text('You are Late', width/2, height/2);}
     fill(0);
 }
